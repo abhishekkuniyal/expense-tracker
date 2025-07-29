@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <title>Expense Tracker</title>
+</head>
+<body class="bg-gradient-to-br from-sky-300 to-100% to-blue-500 h-screen flex justify-center items-center ">
+    <div class="bg-white backdrop-blur-lg backdop-filter h-125 w-100 md:w-150 rounded-xl font-rubik outline-1 outline-white">
+
+        <h1 class="text-black md:text-2xl text-xl text-center font-bold py-4">Expense Tracker</h1>
+        <div class="bg-gradient-to-br from-sky-300 to-blue-500 to-100% h-42 m-7 rounded-xl mt-2 text-center font capitalize outline-blue-500 outline-2 ">
+
+            <h1 class="font-semibold text-md py-3 hover:text-white duration-500">YOUR BALANCE</h1>
+
+            <h1 class="font-bold text-2xl hover:text-white duration-500">
+                ₹ <span id="balance">000</span>
+            </h1>
+
+            <div class="flex gap-5 mt-5 justify-center items-center md:m-3 ">
+
+                <div class="bg-white md:h-15 md:w-75 w-35 h-12 rounded-lg text-sm font-bold text-green-500 flex justify-center flex-col items-center hover:bg-green-100 duration-500">
+                    <span>income</span>
+                    <h1 class="text-lg">₹
+                        <span id="income">000</span>
+                    </h1>
+                </div>
+                <div class="bg-white md:h-15 md:w-75 w-35 h-12 rounded-lg flex justify-center flex-col text-sm font-bold text-red-500 items-center hover:bg-red-100 duration-500">
+                    <span>expense</span>
+                    <h1 class="text-lg">₹<span id="expense">000</span></h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between capitalize m-7 text-sm ">
+           <div class="flex w-60 flex-col    ">
+               <h1 class="font-semibold mb-2">Transactions</h1>
+               <div
+                   id="transaction-list"
+                   class="flex flex-col max-h-45 overflow-y-auto space-y-1 pr-2 border-t-1 border-l-1 rounded-xl border-gray-300 border-b-1 "
+               >
+                   </div>
+           </div>
+
+
+            <div class="bg-gray-200 flex flex-col items-center w-40 md:w-70 h-55 rounded-md md:ml-1 ">
+                <h1 class="font-semibold mt-2 md:mr-auto md:ml-2 "> add transactions</h1>
+                <form action="" class="flex flex-col justify-center md:items-start space-y-2 text-sm items-center" >
+                    <label for="" class="mt-2">Description</label>
+                    <input class="bg-white outline-none py-1 w-35 p-2 rounded-md md:w-65 " type="text" placeholder="enter description" id="detail">
+                    <label for="">Amount</label>
+                    <input class="bg-white outline-none py-1 w-35 p-2 rounded-md md:w-65 " type="text" placeholder="enter Amount" id="amount">
+                    <button class="bg-gradient-to-br from-sky-500 to-blue-600 text-white font-semibold md:w-65 w-35 mt-2 py-2 rounded-md hover:bg-gradient-to-br hover:from-sky-600 hover:to-blue-700 " id="btn">Add transactions</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
